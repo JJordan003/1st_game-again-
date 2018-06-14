@@ -11,13 +11,14 @@ config_version=3
 [application]
 
 config/name="Bestest Game"
+run/main_scene="res://scene/root.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1600
 window/size/height=900
-window/size/resizable=false
+window/stretch/mode="viewport"
 
 [rendering]
 
