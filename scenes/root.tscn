@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/resolution.png" type="Texture" id=1]
 [ext_resource path="res://scripts/graphic/change_resoultion.gd" type="Script" id=2]
+[ext_resource path="res://scripts/graphic/set_fullscreen.gd" type="Script" id=3]
 
 [node name="control" type="Control" index="0"]
 
@@ -70,7 +71,7 @@ texture = ExtResource( 1 )
 region_rect = Rect2( 10, 10, 10, 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Button" type="Button" parent="container/viewport" index="1"]
+[node name="r1920" type="Button" parent="container/viewport" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -92,6 +93,60 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "1920x1080"
+flat = false
+align = 1
+script = ExtResource( 2 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="fullscreen" type="Button" parent="container/viewport" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 40.0
+margin_right = 223.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "fullscreen"
+flat = false
+align = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="window" type="Button" parent="container/viewport" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 40.0
+margin_right = 323.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Window"
 flat = false
 align = 1
 script = ExtResource( 2 )
