@@ -7,10 +7,7 @@ path="res://.import/black.png-5528774ebcc66f091be54e537e2b53fc.stex"
 [deps]
 
 source_file="res://resources/black.png"
-source_md5="b8bf59e29f373f79509f9516e265f1eb"
-
 dest_files=[ "res://.import/black.png-5528774ebcc66f091be54e537e2b53fc.stex" ]
-dest_md5="0192575b11c8698d60d58932394495e5"
 
 [params]
 
