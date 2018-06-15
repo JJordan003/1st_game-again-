@@ -7,7 +7,10 @@ path="res://.import/black_bar.png-d9353dce234f8e0fe80ee6b232c7543d.stex"
 [deps]
 
 source_file="res://resources/black_bar.png"
+source_md5="9200243d8692e3f77995763a34c9770a"
+
 dest_files=[ "res://.import/black_bar.png-d9353dce234f8e0fe80ee6b232c7543d.stex" ]
+dest_md5="a0f9d734045f7cad9d2c203eadcdf15d"
 
 [params]
 
