@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/black_bar.png-d9353dce234f8e0fe80ee6b232c7543d.stex"
+path="res://.import/black_pixel.png-7d6d7836d3071d7fc67a4f4d29b1cb15.stex"
 
 [deps]
 
-source_file="res://resources/black_bar.png"
-source_md5="9129b3d2d3f9ae532494ba6f0e3f8884"
+source_file="res://resources/black_pixel.png"
+source_md5="dd9ae7f3eb6a5d5bec85cce850adc434"
 
-dest_files=[ "res://.import/black_bar.png-d9353dce234f8e0fe80ee6b232c7543d.stex" ]
-dest_md5="9814d7e21e23dde1e51e443e4c479e7e"
+dest_files=[ "res://.import/black_pixel.png-7d6d7836d3071d7fc67a4f4d29b1cb15.stex" ]
+dest_md5="212f726881ad9e514c5408a8c0d57c52"
 
 [params]
 

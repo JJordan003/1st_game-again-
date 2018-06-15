@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scripts/graphic/altenter.gd" type="Script" id=1]
+[ext_resource path="res://scripts/load_menu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/graphic/altenter.gd" type="Script" id=2]
 
 [node name="control" type="Control" index="0"]
 
@@ -33,6 +34,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 stretch = true
 stretch_shrink = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="viewport" type="Viewport" parent="container" index="0"]
@@ -60,6 +62,6 @@ shadow_atlas_quad_0 = 2
 shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 
