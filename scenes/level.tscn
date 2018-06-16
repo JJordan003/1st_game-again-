@@ -4,17 +4,17 @@
 [ext_resource path="res://scripts/player/test.gd" type="Script" id=2]
 [ext_resource path="res://resources/icon.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Node2D" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -37,7 +37,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
 
 scale = Vector2( 7, 4 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="1"]
@@ -66,7 +66,7 @@ _sections_unfolded = [ "Collision", "Linear" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="0"]
 
 scale = Vector2( 2.4, 2.4 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D" index="1"]

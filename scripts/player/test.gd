@@ -11,4 +11,4 @@ func _process(delta):
 	
 	if gravity_scale < 20:
 		gravity_scale += 1
-	print(gravity_scale)
+#	print(gravity_scale)
