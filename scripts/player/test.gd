@@ -12,3 +12,7 @@ func _process(delta):
 	if gravity_scale < 20:
 		gravity_scale += 1
 #	print(gravity_scale)
+	if Input.is_action_just_pressed("ui_reset"):
+		loading.exportScene("res://scenes/level.tscn")
+		loading.clearChildren()
+		loading.loading()
