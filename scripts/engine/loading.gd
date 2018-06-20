@@ -15,7 +15,6 @@ func clearChildren():
 	pass
 
 func loading():
-	print("LOADING SCENE: ", scene)
 	get_node(VIEWPORT_PATH).add_child(load(scene).instance())
 	pass
 

@@ -25,7 +25,9 @@ func is_colliding(area):
 	pass
 	
 func _process(delta):
-	
+	#
+	#MOVEMENT:
+	#
 	if Input.is_action_pressed("ui_left"):
 		acceleration -= 1
 		pass #increasing acceleration with pressing binded key
@@ -70,11 +72,7 @@ func _process(delta):
 	if velocity.x < -MAX_SPEED:
 		velocity.x = -MAX_SPEED
 		pass #limiting speed, so that the player wont be able to go crazy high speeds
-	
-	if debug == true:
-		print("acceleration :",acceleration,", velocity.x: ",velocity.x,", velocity.y: ",velocity.y)
-		pass #various purposes
-	
+		
 	movespeed.x = delta * velocity.x
 	movespeed.y = delta * velocity.y
 	move_and_collide(movespeed) #putting all the above variables into use 
