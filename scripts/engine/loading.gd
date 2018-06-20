@@ -9,11 +9,18 @@ func exportScene(exported_scene):
 
 func clearChildren():
 	for child in range(0,get_node(VIEWPORT_PATH).get_child_count()):
-		get_node(VIEWPORT_PATH).get_child(0).queue_free()
+		get_node(VIEWPORT_PATH).get_child(child).queue_free()
+		print(child, get_node(VIEWPORT_PATH).get_child(0))
 		pass
 	pass
 
 func loading():
-	print("LOADING NEXT SCENE: ", scene)
+	print("LOADING SCENE: ", scene)
 	get_node(VIEWPORT_PATH).add_child(load(scene).instance())
+	pass
+
+func fullload(exported_scene):
+	exportScene(exported_scene)
+	clearChildren()
+	loading()
 	pass

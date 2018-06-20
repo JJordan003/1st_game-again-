@@ -2,8 +2,11 @@ extends Node2D
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_reset"):
-		loading.exportScene("res://scenes/level.tscn")
-		loading.clearChildren()
-		loading.loading()
+		loading.fullload("res://scenes/level.tscn")
 		pass
+	pass
+
+func _ready():
+	loading.exportScene("res://scenes/player.tscn")
+	loading.loading()
 	pass

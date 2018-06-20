@@ -1,6 +1,6 @@
 extends ViewportContainer
 
 func _ready():
-	loading.exportScene("res://scenes/mainmenu.tscn")
-	loading.loading()
+	OS.set_window_title("XD")
+	loading.fullload("res://scenes/mainmenu.tscn")
 	pass
