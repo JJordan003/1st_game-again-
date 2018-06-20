@@ -18,7 +18,7 @@ extents = Vector2( 31.725, 0.878845 )
 custom_solver_bias = 0.0
 extents = Vector2( 1.11816, 32.0699 )
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 960, 540 )
 input_pickable = false
@@ -27,12 +27,14 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-SPEED = 20
+SPEED = 15
 GRAVITY = 1200
-AIR_ACCELERATION = 0.1
-MAX_SPEED = 1000
-SLOW_DOWN_SPEED = 50.0
+AIR_ACCELERATION = 0.6
+MAX_SPEED = 600
+SLOW_DOWN_SPEED = 500.0
 JUMP_HEIGHT = 700
+MAX_ACCELERATION = 40
+ACCELERATION_MULTIPLIER = 4.0
 
 [node name="player_sprite" type="Sprite" parent="." index="0"]
 

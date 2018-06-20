@@ -29,7 +29,6 @@ size_flags_vertical = 1
 
 [node name="StaticBody2D1" type="StaticBody2D" parent="level" index="0"]
 
-editor/display_folded = true
 position = Vector2( 896, 900 )
 input_pickable = false
 collision_layer = 1
