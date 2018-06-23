@@ -11,7 +11,6 @@ func exportScene(exported_scene):
 func clearChildren():
 	for child in range(0,get_node(VIEWPORT_PATH).get_child_count()):
 		get_node(VIEWPORT_PATH).get_child(child).queue_free()
-		print(child, get_node(VIEWPORT_PATH).get_child(0))
 		pass
 	pass
 
