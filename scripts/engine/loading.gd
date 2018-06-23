@@ -2,6 +2,7 @@ extends Node2D
 
 const VIEWPORT_PATH = "/root/control/container/viewport"
 var scene
+var path
 
 func exportScene(exported_scene):
 	scene = exported_scene

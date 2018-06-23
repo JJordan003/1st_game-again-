@@ -22,7 +22,7 @@ func is_colliding(area):
 	return false
 	pass
 	
-func _process(delta):
+func _physics_process(delta):
 	
 	if is_colliding("collisions/collision_ground"):
 		if Input.is_action_pressed("ui_left"):
@@ -80,7 +80,10 @@ func _process(delta):
 	
 	if is_colliding("collisions/collision_ground"):
 		if !Input.is_action_pressed("ui_left") and !Input.is_action_pressed("ui_right"):
-			acceleration = 0
+			acceleration /= 2
+			pass
+		if Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_right"):
+			acceleration /= 2
 			pass
 		pass #is responsible for slowing down player when not accelerating
 	if debug == true:
@@ -98,3 +101,8 @@ func _process(delta):
 			debug == false
 	pass
 	#dislaimer: i don't remember what and why i wrote all this, if it contains some bugs it'll be an ass to fix so please don't report any thanks
+func _process(delta):
+	if Input.is_action_just_pressed("editor_spawn"):
+		spawn.ent("res://scenes/entities/black_box.tscn")
+		pass
+	pass
