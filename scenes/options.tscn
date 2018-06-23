@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/white.png" type="Texture" id=1]
 [ext_resource path="res://resources/black_pixel.png" type="Texture" id=2]
+[ext_resource path="res://scripts/graphic/change_focus_options.gd" type="Script" id=3]
 
 [node name="options" type="Container" index="0"]
 
@@ -95,7 +96,7 @@ custom_constants/margin_left = 120
 custom_constants/margin_bottom = 80
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="HSplitContainer" type="HSplitContainer" parent="margin/margin" index="0"]
+[node name="split" type="HSplitContainer" parent="margin/margin" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -115,55 +116,12 @@ split_offset = 0
 collapsed = false
 dragger_visibility = 0
 
-[node name="left" type="VBoxContainer" parent="margin/margin/HSplitContainer" index="0"]
+[node name="left" type="VBoxContainer" parent="margin/margin/split" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 760.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_constants/separation = 50
-alignment = 0
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="margin/margin/HSplitContainer/left" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = true
-bbcode_text = "[size=25][color=white]FULLSCREEN[/color][/size]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = false
-tab_size = 4
-text = "[size=25]FULLSCREEN[/size]"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect" ]
-
-[node name="right" type="VBoxContainer" parent="margin/margin/HSplitContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 12.0
 margin_right = 1440.0
 margin_bottom = 760.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -173,7 +131,81 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 50
-alignment = 2
-_sections_unfolded = [ "custom_constants" ]
+alignment = 0
+_sections_unfolded = [ "Margin", "custom_constants" ]
+
+[node name="video" type="Button" parent="margin/margin/split/left" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1440.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Video"
+flat = true
+align = 1
+script = ExtResource( 3 )
+
+[node name="audio" type="Button" parent="margin/margin/split/left" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 1440.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Audio"
+flat = true
+align = 1
+script = ExtResource( 3 )
+
+[node name="controls" type="Button" parent="margin/margin/split/left" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 140.0
+margin_right = 1440.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Controls"
+flat = true
+align = 1
+script = ExtResource( 3 )
 
 

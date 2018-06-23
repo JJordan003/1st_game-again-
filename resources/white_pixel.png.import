@@ -7,10 +7,7 @@ path="res://.import/white_pixel.png-542b73d7e81ebbde04cca981bda87eb2.stex"
 [deps]
 
 source_file="res://resources/white_pixel.png"
-source_md5="afa7e45a35892b8a7804e1d285c10efc"
-
 dest_files=[ "res://.import/white_pixel.png-542b73d7e81ebbde04cca981bda87eb2.stex" ]
-dest_md5="55a9ad7c9f587b0aed6dfb04ca1e7348"
 
 [params]
 
