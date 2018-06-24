@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/scene_editor.gd" type="Script" id=1]
 [ext_resource path="res://resources/white_pixel.png" type="Texture" id=2]
+[ext_resource path="res://scripts/gui/editor/material_white_box.gd" type="Script" id=3]
+[ext_resource path="res://scripts/gui/editor/material_black_box.gd" type="Script" id=4]
 
 [node name="scene_editor" type="Container" index="0"]
 
@@ -60,7 +62,23 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin" ]
 
-[node name="gui_info" type="VBoxContainer" parent="camera" index="0"]
+[node name="GUI" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 960, 540 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 960, 540 )
+
+[node name="Sprite" type="Sprite" parent="GUI" index="0"]
+
+modulate = Color( 1, 1, 1, 0.276275 )
+position = Vector2( 780, 0 )
+scale = Vector2( 360, 1080 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="gui" type="VBoxContainer" parent="GUI" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -79,23 +97,33 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="Sprite" type="Sprite" parent="camera/gui_info" index="0"]
-
-position = Vector2( 180, 540 )
-scale = Vector2( 360, 1080 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="mouse_position" type="RichTextLabel" parent="camera/gui_info" index="1"]
+[node name="gui_info" type="VBoxContainer" parent="GUI/gui" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -1.0
-margin_top = 1.0
-margin_right = 359.0
-margin_bottom = 28.0
+margin_right = 360.0
+margin_bottom = 75.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 5
+alignment = 0
+_sections_unfolded = [ "Margin", "custom_constants" ]
+
+[node name="mouse" type="RichTextLabel" parent="GUI/gui/gui_info" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 360.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 0, 15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -105,17 +133,181 @@ size_flags_vertical = 1
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "adsads"
+bbcode_enabled = false
+bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = false
 tab_size = 4
-text = "adsads"
-scroll_active = false
+text = ""
+scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = true
-_sections_unfolded = [ "BBCode" ]
+_sections_unfolded = [ "BBCode", "Rect" ]
+
+[node name="zoom" type="RichTextLabel" parent="GUI/gui/gui_info" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 20.0
+margin_right = 360.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 0, 15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = false
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = true
+_sections_unfolded = [ "BBCode", "Rect" ]
+
+[node name="entity" type="RichTextLabel" parent="GUI/gui/gui_info" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 360.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 0, 15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = false
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = true
+_sections_unfolded = [ "BBCode", "Rect" ]
+
+[node name="amount" type="RichTextLabel" parent="GUI/gui/gui_info" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 60.0
+margin_right = 360.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = false
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = true
+_sections_unfolded = [ "BBCode", "Rect" ]
+
+[node name="material" type="VBoxContainer" parent="GUI/gui" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 79.0
+margin_right = 360.0
+margin_bottom = 124.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 5
+alignment = 0
+_sections_unfolded = [ "Margin", "custom_constants" ]
+
+[node name="white_box" type="Button" parent="GUI/gui/material" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 360.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "white_box"
+flat = false
+align = 1
+script = ExtResource( 3 )
+
+[node name="black_box" type="Button" parent="GUI/gui/material" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 25.0
+margin_right = 360.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "black_box"
+flat = false
+align = 1
+script = ExtResource( 4 )
 
 

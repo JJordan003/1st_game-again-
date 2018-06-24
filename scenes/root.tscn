@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/engine/boot.gd" type="Script" id=1]
 [ext_resource path="res://scripts/graphic/altenter.gd" type="Script" id=2]
 
-[node name="control" type="Control" index="0"]
+[node name="control" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -18,6 +18,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="container" type="ViewportContainer" parent="." index="0"]
 

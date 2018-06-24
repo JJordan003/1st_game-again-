@@ -7,8 +7,8 @@ func ent(ent): #spawns entity at mouse position
 	var operating_node = get_node(level_tree)
 	var spawn_position = Vector2()
 	var mouse_position = Vector2()
-	mouse_position.x = operating_node.get_local_mouse_position().x+32
-	mouse_position.y = operating_node.get_local_mouse_position().y+32
+	mouse_position.x = operating_node.get_local_mouse_position().x + 32
+	mouse_position.y = operating_node.get_local_mouse_position().y + 32
 	
 	while spawn_position.x < mouse_position.x:
 		spawn_position.x += 64
