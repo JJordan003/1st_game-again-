@@ -9,6 +9,6 @@ func _process(delta):
 
 func _ready():
 	spawn.level_tree = get_path()
-	loading.exportScene("res://scenes/player.tscn")
+	loading.exportScene("res://scenes/entities/player.tscn")
 	loading.loading()
 	pass

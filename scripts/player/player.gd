@@ -49,7 +49,7 @@ func _physics_process(delta):
 		velocity.y += GRAVITY * delta
 		pass #gravity / this makes player fall
 	
-	if !Input.is_action_pressed("player_jump") and is_colliding("collisions/collision_ground"):
+	if !Input.is_action_just_pressed("player_jump") and is_colliding("collisions/collision_ground"):
 		velocity.y = 0
 		pass #stopping gravity when on surface
 	
@@ -101,8 +101,3 @@ func _physics_process(delta):
 			debug == false
 	pass
 	#dislaimer: i don't remember what and why i wrote all this, if it contains some bugs it'll be an ass to fix so please don't report any thanks
-func _process(delta):
-	if Input.is_action_just_pressed("editor_spawn"):
-		spawn.ent("res://scenes/entities/black_box.tscn")
-		pass
-	pass
