@@ -26,9 +26,10 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="background" type="Sprite" parent="." index="0"]
+[node name="sprite_background" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="bar" type="Container" parent="." index="1"]
 
