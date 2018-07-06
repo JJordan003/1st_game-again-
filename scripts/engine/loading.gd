@@ -1,6 +1,6 @@
 extends Node2D
 
-const VIEWPORT_PATH = "/root/control/container/viewport"
+const VIEWPORT_PATH = "/root/control/container"
 var scene
 var path
 
