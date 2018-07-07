@@ -18,6 +18,7 @@ config/icon="res://resources/icon.png"
 
 loading="*res://scripts/engine/loading.gd"
 spawn="*res://scripts/level/spawn.gd"
+global="*res://scripts/engine/globalvars.gd"
 
 [display]
 

@@ -30,12 +30,12 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 SPEED = 10
 GRAVITY = 1200
-AIR_ACCELERATION = 0.6
+AIR_ACCELERATION = 0.8
 MAX_SPEED = 600
 SLOW_DOWN_SPEED = 500.0
 JUMP_HEIGHT = 800
 MAX_ACCELERATION = 40
-ACCELERATION_MULTIPLIER = 4.0
+ACCELERATION_MULTIPLIER = 8.0
 
 [node name="player_sprite" type="Sprite" parent="." index="0"]
 
@@ -126,7 +126,7 @@ _sections_unfolded = [ "Transform" ]
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 0.4, 0.4 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000

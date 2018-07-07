@@ -1,6 +1,5 @@
 extends Node2D
 
-const VIEWPORT_PATH = "/root/control/container"
 var scene
 var path
 
@@ -9,13 +8,13 @@ func exportScene(exported_scene):
 	pass	
 
 func clearChildren():
-	for child in range(0,get_node(VIEWPORT_PATH).get_child_count()):
-		get_node(VIEWPORT_PATH).get_child(child).queue_free()
+	for child in range(0,get_node(global.INTPATH_VIEWPORT).get_child_count()):
+		get_node(global.INTPATH_VIEWPORT).get_child(child).queue_free()
 		pass
 	pass
 
 func loading():
-	get_node(VIEWPORT_PATH).add_child(load(scene).instance())
+	get_node(global.INTPATH_VIEWPORT).add_child(load(scene).instance())
 	pass
 
 func fullload(exported_scene):
